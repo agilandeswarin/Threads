@@ -1,0 +1,31 @@
+package THREAD_Java;
+
+//RUNNABLE should use Interface 
+
+class student implements Runnable{
+	
+	int marks=60;
+	public void run() {
+		
+		if(marks>35) {
+			System.out.println("Pass");
+		}
+		else {
+			System.out.println("Fail");
+		}
+		
+	}
+}
+
+
+public class Runnable_Thread {
+
+	public static void main(String[] args) {
+		
+       Runnable s1=new student();
+       
+       Thread t1=new Thread(s1);
+       t1.start();
+	}
+
+}
